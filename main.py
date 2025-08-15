@@ -4,7 +4,7 @@ import player
 
 screen = py.display.set_mode((map.COLS * map.TILE_SIZE, map.ROWS * map.TILE_SIZE))
 py.display.set_caption("3d Engine lol") 
-
+clock  = py.time.Clock()
 
 
 white  = (255, 255, 255)
@@ -41,7 +41,9 @@ while running:
         screen.fill((0, 0, 0)) 
         draw_map()
         player.draw(screen)
+        player.main()
     
     py.display.flip() 
+    clock.tick(120)
 
 
