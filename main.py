@@ -1,6 +1,6 @@
 import pygame as py
 import map
-
+import player
 
 screen = py.display.set_mode((map.COLS * map.TILE_SIZE, map.ROWS * map.TILE_SIZE))
 py.display.set_caption("3d Engine lol") 
@@ -40,6 +40,7 @@ while running:
 
         screen.fill((0, 0, 0)) 
         draw_map()
+        player.draw(screen)
     
     py.display.flip() 
 
