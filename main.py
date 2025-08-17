@@ -3,15 +3,16 @@ import map
 import player
 import math
 
+screen_w = 1200
+screen_h = 800
 
-
-screen = py.display.set_mode((map.COLS * map.TILE_SIZE, map.ROWS * map.TILE_SIZE))
+screen = py.display.set_mode((screen_w, screen_h))
 py.display.set_caption("3d Engine lol") 
 clock  = py.time.Clock()
                         
 
 #explaination of the 3d effect.          
-projection_plane_dist = (map.COLS * map.TILE_SIZE / 2) / math.tan(player.FOV / 2)
+projection_plane_dist = (screen_w) / math.tan(player.FOV / 2)
     #this help scales everything to fit in the screen well. 
 #tile_size / distance in "wall_height = (tile_size / distance) * projection_plane_dist" makes closer walls taller, and farther walls smalelr
 

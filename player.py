@@ -15,7 +15,7 @@ ray_length = 100
 new_y = 0
 new_x = 0
 FOV = math.pi / 3   
-num_rays = 100      
+num_rays = 800     
 max_depth = 10000
 
 #will  organize (maybe *toung out emoji*)
