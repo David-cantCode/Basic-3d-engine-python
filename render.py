@@ -19,5 +19,5 @@ def render_3d( distance,  projection_plane_dist,  ray, num_rays, screen):
     shade = 255 - int(distance * 5)
     shade = max(0, min(100, shade))
 
-    if shade != 0:  #if object is not completely hidden. hopefully makes the program faster
+    if shade != 0:  #if object is  completely hidden. hopefully makes the program faster
         py.draw.rect(screen, (shade, 0, 0), (x, y1, map.ROWS * map.TILE_SIZE // num_rays + 1, y2 - y1))
